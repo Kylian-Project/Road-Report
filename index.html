@@ -1,0 +1,109 @@
+<!--  
+#########################################
+####### Copyright Kylian-Project ########
+#########################################
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Road Report | Kylian-Project</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="icon/png" href="img/icon.png">
+</head>
+<body>
+  <div id="back-size"></div>
+
+  <div class="vertical-text left_vert" onclick="open_view_exp()">▼ Liste Des Conduites ▼</div>
+  <div class="vertical-text right_vert" onclick="open_new_exp()">▼ Enregistrer Conduite ▼</div>
+
+  <div class="cadre">
+    <h1 class="main_tittle">Road Report</h1>
+    <h3>
+    Bienvenue dans notre application web de suivi de conduite accompagnée !<br>
+
+    Nous vous offrons un moyen simple et efficace d'enregistrer vos expériences de conduite accompagnée, afin de vous aider à obtenir votre permis de conduire en toute confiance. Notre application vous permet de consigner et de suivre vos progrès de conduite à travers différents paramètres tels que le type de trajet, les conditions météorologiques, et bien plus encore.
+  </h3>
+</div>
+  <div class="back_flou" id="20"></div>
+
+  <div class="page1" id="page1">
+    <div class="vertical-text left_vert right_to_left" onclick="close_page()">▼ Retour Accueil ▼</div>
+    <div class="scroll2">
+    <h1>Expérience de conduite</h1>
+    <form id="Webform">
+      <div class="col1 flex">
+        <label for="prenom">Prénom :</label>
+        <input id="prenom" name="prenom" placeholder="Prénom">
+
+        <label for="heure">Heure De Depart :</label>
+        <input type="time" id="heure" name="heure" >
+
+        <label for="distance">Distance Parcourue :</label>
+        <input type="number" id="distance" name="distance" min="1" inputmode="numeric" placeholder="Ex : 134">
+
+        <label for="meteo">Météo :</label>
+        <select id="meteo" name="meteo"></select>
+
+        <label for="typeroute">Type De Route :</label>
+        <select id="typeroute" name="typeroute"></select>
+
+        <label for="trafic">Trafic Routier :</label>
+        <select id="trafic" name="trafic"></select>
+      </div>
+
+
+      <div class="col2 flex">
+        <label for="nom">Nom :</label>
+        <input id="nom" name="nom" placeholder="Nom">
+
+        <label for="heure2">Heure D'arrivée :</label>
+        <input type="time" id="heure2" name="heure2" >
+
+        <label for="date">Date :</label>
+        <input class="test" id="date" name="date" type="Date" >
+
+        <label for="visibilite">Visibilité :</label>
+        <select id="visibilite" name="visibilite"></select>
+
+        <label for="etatroute">Etat De La Route :</label>
+        <select id="etatroute" name="etatroute"></select>
+
+        <label for="typeconduite">Type De Conduite :</label>
+        <select id="typeconduite" name="typeconduite"></select>
+      </div>
+
+      <div class="com">
+        <label for="commentaire">Commentaire :</label><br>
+        <textarea id="commentaire" name="commentaire" class="commentaire2" placeholder="Entrez votre message ici" maxlength="500"></textarea>
+      </div>
+
+      <button type="button" class="button" onclick="saveExp();">Envoyer</button>
+    </form>
+    <!-- Button mobile -->
+    <img class="back_img" alt="<-" src="img/arrow.png" onclick="close_page()">
+    </div>
+  </div>
+
+  <div class="page2" id="page2">
+    <div class="back_flou" id="30"></div>
+
+    <div class="vertical-text right_vert left_to_right" onclick="close_page()">▼ Retour Accueil ▼</div>
+    <div class="table"></div>
+    <button type="button" class="button to_footer" onclick="delAll();">Effacer Tout</button>
+    <!-- Button mobile -->
+    <img class="back_img2" alt="->" src="img/arrow.png" onclick="close_page()">
+  </div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
+<!--  
+#########################################
+####### Copyright Kylian-Project ########
+#########################################
+-->
